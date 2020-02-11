@@ -1,0 +1,47 @@
+目录结构
+  -node_modules文件夹 项目依赖（对webpack进行的封装）
+  -public 文件夹
+    1、favicon.ico 网站图标
+    2、index.html页面入口文件
+  -src文件夹
+    main.js 入口js
+    assets 存放静态文件
+    components 存放公用组件
+    App.vue 入口vue文件
+  -.eslintrc.js配置
+  -.gitignore 指定文件无需提交到git上
+  -balel.config.js 使用一些预设
+  -package.json 项目描述及依赖
+  -package-lock.json 版本管理使用的文件
+
+手动增加内容
+ src 文件夹下新增文件夹：
+    api  config  router utils  views store
+ 
+多环境运行
+  方法一（本项目使用的方法）
+    1.在config文件新建index.js文件，根据全局的环境变量来进行判断，并进行输出。
+    2.更改package.json文件
+  方法二：①创建三个文件【.env.development】、【.env.production】、【.env.test】
+          .env.development——用于serve，开发环境
+          .env.production——用于build，线上环境
+          .env.test——测试环境
+          ②分别在文件内写上
+            开发环境：
+              //.env.development
+              VUE_APP_BASE_API = '需要请求API'
+            线上环境：
+              //.env.production
+              VUE_APP_BASE_API = '需要请求API'
+            测试环境：
+              //.env.test
+              VUE_APP_BASE_API = '需要请求API'
+            当使用到该变量时，可用process.env.VUE_APP_BASE_API
+          ③更改package.json文件
+            "scripts": {
+                "dev": "vue-cli-service serve",
+                "test": "vue-cli-service serve --mode test",
+                "build": "vue-cli-service build",
+                "build:test": "vue-cli-service build --mode test",
+                "lint": "vue-cli-service lint"
+              },
