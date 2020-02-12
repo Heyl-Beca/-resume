@@ -46,4 +46,7 @@
                 "lint": "vue-cli-service lint"
               },
 
-2020/02/11
+模块化vuex
+  store 文件夹下 新建modules文件夹 存放分类文件
+  getters文件 =》对state进行处理
+  
