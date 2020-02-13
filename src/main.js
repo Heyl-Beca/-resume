@@ -3,7 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// import globalComponent from './components/global/index'
+// 引入第三方UI框架
+import ElementUi from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUi)
 
 Vue.config.productionTip = false
 
