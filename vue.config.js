@@ -20,17 +20,17 @@ module.exports = {
         changeOrigin: true
       }
     }
-  }
+  },
   // assetsDir: 'assets', // 静态文件目录
   // publicPath: './', // 编译后的地址，可以根据环境进行设置
   // lintOnSave: true // 是否开启编译时是否不符合eslint提示
 
-  //css
-  css:{
+  // css
+  css: {
     loaderOptions: {
       // @/ is an alias to src/
       less: {
-        data:`
+        data: `
           @import "@/assets/css/variable.less";
           @import "@/assets/css/common.less";
           @import "@/assets/css/mixin.less";
