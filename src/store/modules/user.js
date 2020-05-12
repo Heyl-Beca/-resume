@@ -1,4 +1,4 @@
-import { getToken, setToken } from '@/util/auth'
+import { getToken, setToken } from '@/utils/auth'
 import api from '@/api/user'
 
 const user = {
